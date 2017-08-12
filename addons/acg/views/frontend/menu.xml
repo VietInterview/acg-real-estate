@@ -1,0 +1,100 @@
+<odoo>
+    <data>
+        <template name="Header menu" id="iess.menu">
+            <header class="cs-default-header" id="header">
+                <div class="main-head">
+                    <div class="navbar navbar-default navbar-static-top container">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="/iess/static/src/images/logo.png" style="width:135px; height: 34px;"
+                                             alt="JobCareer"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-right">
+                                <div class="nav-right-area">
+                                    <nav class="navigation">
+                                        <ul class="nav navbar-nav">
+                                            <li>
+                                                <a href="/jobs">Tất Cả Việc Làm</a>
+                                            </li>
+                                            <li>
+                                                <a href="/blogs">Tư vấn</a>
+                                            </li>
+                                            <li>
+                                                <a href="/about">Giới thiệu</a>
+                                            </li>
+                                            <li class="cs-login-area">
+                                                <div class="cs-loginsec"
+                                                     t-if="user_id.partner_id.name == 'Public user'">
+                                                    <ul class="cs-drp-dwn">
+                                                        <li>
+                                                            <div class="user-account">
+                                                                <div class="join-us">
+                                                                    <i class="cs-color icon-pencil6"/>
+                                                                    <a class="cs-color" data-target="#join-us"
+                                                                       data-toggle="modal" href="#">Đăng Ký
+                                                                    </a>
+                                                                </div>
+                                                                <div class="login">
+                                                                    <a id="btn-header-main-login" data-target="#sign-in"
+                                                                       data-toggle="modal"
+                                                                       class="cs-login-switch cs-bgcolor"
+                                                                       href="#"><i class="icon-login"/>Đăng Nhập
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="login"
+                                                     t-if="not user_id.partner_id.name == 'Public user'">
+                                                    <div class="login-dashboard-main">
+                                                        <div class="cs-loging-dashboard">
+                                                            <div class="dropdown keep-open">
+                                                                <a class="navicon-button x dropdown-toggle"
+                                                                   data-toggle="dropdown" href="#">
+                                                                    <div class="navicon" />
+                                                                        <figure>
+                                                                            <img src="data:image/webp;base64,UklGRmQCAABXRUJQVlA4IFgCAADwCwCdASoyACgAPm0qk0WkIqGVXAb8QAbEtIAIkfj4f532tdjcoIHxIq5U7Q69OHL1Mvxr6tLqjnT1ZGL/9VYIfFzUxYpIIeN1fUoQqfrAnxtpEX1MHriB1+4z4dUdZhVPgfFqctUVYAD+/sLAJ4158UJQTxLceu6en8S77R6nlRDXv/7QN8IswEp32V7AkjhsRq3QC/t5YmzjuWU/sTrxIuJFv3bzFEFfpf/xWDGPdbllSdE1yjCyLe3D90jsxCq/GGjiZ52eACxq4AZUJCno4sqg/5Vq1APu49Eo5XQC7N3gw+WZTojMS7KvZTdC3SZV7pnGGRPcI/4qk8kRwNWmQmB9H9HDdNcz2uhGNK8zv9LpVy+4P2EWiuLr58ujeXtiXhYOxC9L6wHO81MGXbhk69q/78/sVAlpszYTT+VIZtv8S9geT2ATwiFKqxbo7HupMzaPDP2K2FwNKvgB24KvdNT1na+7ftMEH6XdHbM+T9Ft4oKqy8VY/SSbEic8/4L1b3TQan+US8qgAXOFNcxtV/X+BASWh0NpGYiaelsMU2CL4HOQnL9zuFyA/7/HP2L+5zXXk87eqXRWmsI4BfdXVaxKXyeH57K85dJfwJHItjeqCbzErVsM+wEJ+ZbeYtDAQ3pD/+m3uB1HKr+8sFdpV0db/eZoJu0+mMIH494/eI0Xnz9YX/jEXR+2F0bEX3SF4PrOmoGYZ7NeFvrUkDD+oYpihYSyhvu43QYEhXfbaOMdOOpPw2Jp5ljE/B0+gWY4caofJ5nAn3NeeL+IJzsPNgr2eJNgAAA=" alt="" data-pagespeed-url-hash="686642684" />
+                                                                        </figure>
+                                                                </a>
+                                                                <div class="cs-login-dropdown">
+                                                                    <ul class="dropdown-menu ">
+                                                                        <li>
+                                                                            <h5><t t-esc="user_id.name" /></h5>
+                                                                            <a class="logout-btn"
+                                                                               href="/web/session/logout?redirect=/home">
+                                                                                <i class="icon-logout" />
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="/account/change-password">
+                                                                                <i class="icon-key4" /> Đổi mật khẩu
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="/account/applied-jobs">
+                                                                                <i class="icon-briefcase2" /> Việc đã ứng tuyển
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </template>
+    </data>
+</odoo>

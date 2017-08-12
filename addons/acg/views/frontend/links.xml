@@ -1,0 +1,360 @@
+<odoo>
+  <data>
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="iESS Frontend Assets">
+      <xpath expr="//link[last()]" position="after">
+        <link rel='stylesheet' href='iess/static/src/css/jobhunt-indeed-jobs-style.css' type='text/css'
+              media='all'/>
+        <link rel='stylesheet'
+              href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&#038;subset=latin&#038;ver=4.7.5'
+              type='text/css' media='all'/>
+        <link rel="stylesheet" type="text/css"
+              href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800&amp;subset=latin,vietnamese"/>
+        <link rel='stylesheet' href='iess/static/src/css/iconmoon.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/widget.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/top-menu.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/nav-icon.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/prettyPhoto.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/custom-style.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/cs-jobhunt-plugin.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/jquery-te-1.4.0.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/jquery_datetimepicker.css' type='text/css'
+              media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/bootstrap-slider.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/custom_script.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/responsive.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/jobhunt-notifications-frontend.css' type='text/css'
+              media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/style.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/cs-woocommerce.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/slicknav.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/chosen.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/settings.css' type='text/css' media='all'/>
+        <link rel='stylesheet' href='iess/static/src/css/bootstrap.css' type='text/css' media='all'/>
+      </xpath>
+      <xpath expr="//script[last()]" position="after">
+        <script type='text/javascript' src='iess/static/src/js/jquery.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery-te-1.4.0.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/modernizr.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/browser-detect.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.themepunch.tools.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.themepunch.revolution.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/custom.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jobhunt-indeed-jobs-function.js'/>
+        <script type='text/javascript' src='iess/static/src/js/bootstrap.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/modernizr.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/browser-detect.js'/>
+        <script type='text/javascript' src='iess/static/src/js/slick.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.sticky.js'/>
+        <script type='text/javascript' src='iess/static/src/js/cs_map_styles.js'/>
+        <script type='text/javascript' src='iess/static/src/js/functions.js'/>
+        <script type='text/javascript' src='iess/static/src/js/menu.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.prettyPhoto.js'/>
+        <script type='text/javascript' src='iess/static/src/js/lightbox.js'/>
+        <script type='text/javascript' src='iess/static/src/js/waypoints.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/bootstrap-slider.js'/>
+        <script type='text/javascript' src='iess/static/src/js/chosen.jquery.js'/>
+        <script type='text/javascript' src='iess/static/src/js/scripts.js'/>
+        <script type='text/javascript' src='iess/static/src/js/isotope.min.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.sticky.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jobhunt_functions.js'/>
+        <script type='text/javascript' src='iess/static/src/js/extra_functions.js'/>
+        <script type='text/javascript' src='iess/static/src/js/functions.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery_datetimepicker.js'/>
+        <script type='text/javascript' src='iess/static/src/js/custom-resolution.js'/>
+        <script type='text/javascript' src='iess/static/src/js/cs-connect.js'/>
+        <script type='text/javascript' src='iess/static/src/js/uiMorphingButton_fixed.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.location-autocomplete.js'/>
+        <script type='text/javascript' src='iess/static/src/js/jquery.easing.1.3.js'/>
+        <script type="text/javascript"
+                src="iess/static/src/js/extensions/revolution.extension.slideanims.min.js"/>
+        <script type="text/javascript"
+                src="iess/static/src/js/extensions/revolution.extension.layeranimation.min.js"/>
+        <script type="text/javascript"
+                src="iess/static/src/js/extensions/revolution.extension.navigation.min.js"/>
+        <script type='text/javascript' src='iess/static/src/js/cs_inline_scripts_functions.js'/>
+      </xpath>
+    </template>
+
+    <template id="login" inherit_id="website.layout" name="Login">
+      <xpath expr="//footer" position="replace">
+        <li class="cs-login-area">
+          <div class="cs-loginsec">
+            <ul class="cs-drp-dwn">
+              <li>
+                <div class="user-account">
+                  <div class="join-us">
+                    <i class="cs-color icon-pencil6"></i>
+                    <a class="cs-color" data-target="#join-us" data-toggle="modal" href="#">Đăng Ký</a>
+                    <div class="modal fade" id="join-us" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <a class="close" data-dismiss="modal">&amp;times;</a>
+                            <h4 id="myModalLabel" class="modal-title">Đăng Ký</h4>
+                          </div>
+                          <div class="modal-body">
+                            <ul class="nav nav-tabs" role="tablist">
+                              <li role="presentation" class="active">
+                                <a href="#" role="tab" data-toggle="tab"><i class="icon-user-add"></i>Ứng Viên
+                                </a>
+                              </li>
+                              <li role="presentation">
+                                <a href="#" role="tab" data-toggle="tab"><i class="icon-briefcase4"></i>Nhà Tuyển Dụng
+                                </a>
+                              </li>
+                            </ul>
+                            <div class="tab-content">
+                              <div id="employer389098" role="tabpanel" class="tab-pane">
+                                <div id="result_650019" class="status-message"></div>
+                                <form method="post" class="wp-user-form demo_test" id="wp_signup_form_650019"
+                                      enctype="multipart/form-data">
+                                  <label class="user">
+                                    <input type="text" placeholder="Tên đăng nhập" class="form-control"
+                                           id="user_login_3650019" name="user_login650019"/>
+                                  </label>
+                                  <label class="email">
+                                    <input type="text" placeholder="Email" id="cs_user_email650019"
+                                           name="cs_user_email650019"/>
+                                  </label>
+                                  <label class="orgniz">
+                                    <input type="text" placeholder="Tên doanh nghiệp" id="cs_organization_name650019"
+                                           name="cs_organization_name650019"/>
+                                  </label>
+                                  <div class="side-by-side select-icon clearfix">
+                                    <div class="select-holder">
+                                      <select required="" data-placeholder="Chọn chuyên ngành"
+                                              class="multiple chosen-select form-control" multiple=""
+                                              id="cs_employer_specialisms650019" name="cs_employer_specialisms650019[]"
+                                              style="height:110px !important;">
+                                        <option value="31">Bán hàng / Kinh doanh</option>
+                                        <option value="28">Bất động sản</option>
+                                        <option value="38">Biên phiên dịch</option>
+                                        <option value="32">Bưu chính viễn thông</option>
+                                        <option value="63">CNTT - Phần cứng / Mạng</option>
+                                        <option value="1">CNTT - Phần mềm</option>
+                                        <option value="27">Khác</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <label class="phone">
+                                    <input type="text" placeholder="Số điện thoại" id="cs_phone_no650019"
+                                           name="cs_phone_no650019"/>
+                                  </label>
+                                  <div class="checks-holder">
+                                    <label>
+                                      <input type="button" tabindex="103" class="user-submit cs-bgcolor acc-submit"
+                                             id="submitbtn1031213056" name="user-submit" value="Đăng ký"/>
+                                    </label>
+                                  </div>
+                                </form>
+                                <div class="register_content"></div>
+                              </div>
+                              <div role="tabpanel" class="tab-pane active" id="candidate389098">
+                                <div id="result_807729" class="status-message"></div>
+                                <div class="login-with">
+                                  <div class="footer-element comment-form-social-connect social_login_ui ">
+                                    <div class="social-login-errors"></div>
+                                    <div class="social_login_facebook_auth"></div>
+                                    <div class="social_login_twitter_auth"></div>
+                                    <div class="social_login_google_auth"></div>
+                                    <div class="social_login_linkedin_auth"></div>
+                                    <div class="social-media">
+                                      <ul>
+                                        <li>
+                                          <a href="#" title="Facebook" data-original-title="Facebook"
+                                             class="social_login_login_facebook facebook">
+                                            <i class="icon-facebook2"></i>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="#" title="Twitter" data-original-title="twitter"
+                                             class="social_login_login_twitter twitter">
+                                            <i class="icon-twitter2"></i>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="#" rel="nofollow" title="google-plus" data-original-title="google-plus"
+                                             class="social_login_login_google gplus">
+                                            <i class="icon-google-plus"></i>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="#" rel="nofollow" title="linked-in" data-original-title="linked-in"
+                                             class="social_login_login_linkedin linkedin" data-applyjobid="">
+                                            <i class="icon-linkedin2"></i>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="cs-separator">
+                                  <span>Hoặc</span>
+                                </div>
+                                <form method="post" class="wp-user-form" id="wp_signup_form_807729"
+                                      enctype="multipart/form-data">
+                                  <label class="user">
+                                    <input type="text" placeholder="Tên đăng nhập" id="user_login4807729"
+                                           name="user_login807729"/>
+                                  </label>
+                                  <label class="email">
+                                    <input type="text" placeholder="Email" id="cs_user_email807729"
+                                           name="cs_user_email807729"/>
+                                  </label>
+                                  <div class="side-by-side select-icon clearfix">
+                                    <div class="select-holder">
+                                      <select required="" data-placeholder="Chọn chuyên ngành"
+                                              class="multiple chosen-select form-control" multiple=""
+                                              id="cs_candidate_specialisms807729" name="cs_candidate_specialisms807729[]"
+                                              style="height:110px !important;">
+                                        <option value="31">Bán hàng / Kinh doanh</option>
+                                        <option value="28">Bất động sản</option>
+                                        <option value="38">Biên phiên dịch</option>
+                                        <option value="32">Bưu chính viễn thông</option>
+                                        <option value="63">CNTT - Phần cứng / Mạng</option>
+                                        <option value="1">CNTT - Phần mềm</option>
+                                        <option value="27">Khác</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <label class="phone">
+                                    <input type="text" placeholder="Số điện thoại" id="cs_phone_no807729"
+                                           name="cs_phone_no807729"/>
+                                  </label>
+                                  <div class="checks-holder">
+                                    <label>
+                                      <input type="button" tabindex="103" class="user-submit cs-bgcolor acc-submit"
+                                             id="submitbtn487914855" name="user-submit" value="Đăng ký"/>
+                                    </label>
+                                  </div>
+                                </form>
+                                <div class="register_content"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="login">
+                    <a id="btn-header-main-login" data-target="#sign-in" data-toggle="modal"
+                       class="cs-login-switch cs-bgcolor" href="#"><i class="icon-login"></i>Đăng Nhập
+                    </a>
+                    <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <div class="login-form cs-login-pbox login-form-id-807729">
+                              <div class="modal-header">
+                                <a class="close" data-dismiss="modal">&amp;times;</a>
+                                <h4 class="modal-title">Đăng nhập</h4>
+                              </div>
+                              <div class="status status-message"></div>
+                              <form method="post" class="wp-user-form webkit" id="ControlForm_807729" action="/web/login">
+                                <label class="user">
+                                  <input type="text" tabindex="11" placeholder="Tên đăng nhập" class="form-control"
+                                         id="user_login807729" name="login"/>
+                                </label>
+                                <label class="password">
+                                  <input type="password" tabindex="12" placeholder="Mật khẩu" size="20"
+                                         class="form-control" id="user_pass807729" name="password" value=""/>
+                                </label>
+                                <label>
+                                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                  <input type="hidden" name="redirect" t-att-value="request.httprequest.path"/>
+                                  <input type="submit" class="cs-bgcolor" name="user-submit" value="Đăng nhập"/>
+                                </label>
+                              </form>
+                              <div class="forget-password">
+                                <i class="icon-help"></i>
+                                <a class="cs-forgot-switch">Quên mật khẩu?</a>
+                              </div>
+                              <div class="cs-separator">
+                                <span>Hoặc</span>
+                              </div>
+                              <div class="footer-element comment-form-social-connect social_login_ui ">
+                                <div class="social-login-errors"></div>
+                                <div class="social_login_facebook_auth"></div>
+                                <div class="social_login_twitter_auth"></div>
+                                <div class="social_login_google_auth"></div>
+                                <div class="social_login_linkedin_auth"></div>
+                                <div class="social-media">
+                                  <ul>
+                                    <li>
+                                      <a href="#" title="Facebook" data-original-title="Facebook"
+                                         class="social_login_login_facebook facebook">
+                                        <i class="icon-facebook2"></i>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" title="Twitter" data-original-title="twitter"
+                                         class="social_login_login_twitter twitter">
+                                        <i class="icon-twitter2"></i>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" rel="nofollow" title="google-plus" data-original-title="google-plus"
+                                         class="social_login_login_google gplus">
+                                        <i class="icon-google-plus"></i>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" rel="nofollow" title="linked-in" data-original-title="linked-in"
+                                         class="social_login_login_linkedin linkedin" data-applyjobid="">
+                                        <i class="icon-linkedin2"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="content-style-form cs-forgot-pbox content-style-form-2" style="display:none;">
+                            <div class="modal-header">
+                              <h4>Quên Mật Khẩu</h4>
+                              <a class="close" data-dismiss="modal">&amp;times;</a>
+                            </div>
+                            <div id="cs-result-64821390"></div>
+                            <div class="login-form-id-64821390">
+                              <form class="user_form" id="wp_pass_lost_64821390" method="post">
+                                <div class="filed-border">
+                                  <div class="input-holder">
+                                    <i class="icon-envelope4"></i>
+                                    <input type="text" placeholder="Enter email address..." class="form-control"
+                                           name="user_input"/>
+                                  </div>
+                                </div>
+                                <label>
+                                  <input type="submit" class="reset_password cs-bgcolor" name="submit" value="Gửi Email"/>
+                                </label>
+                                <a class="cs-bgcolor cs-login-switch">Đăng nhập</a>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </xpath>
+    </template>
+
+    <template id="frontend_layout" inherit_id="website.layout" name="iESS Frontend Layout">
+      <xpath expr="//t[@t-set='html_data']" position="after">
+        <t t-set="body_classname"
+           t-value="'home page-template-default page page-id-100 wp-jobhunt cbp-spmenu-push'"/>
+      </xpath>
+    </template>
+
+    <template id="custom_logo_layout" inherit_id="website.layout_logo_show" name="iESS Logo Layout">
+      <xpath expr="//a[contains(@class,'navbar-brand logo')]/img" position="replace">
+        <img src="/iess/static/src/images/logo.png" t-att-alt="'Logo of %s' % res_company.name"
+             t-att-title="res_company.name"/>
+      </xpath>
+    </template>
+  </data>
+</odoo>

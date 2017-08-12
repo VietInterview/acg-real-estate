@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model='res.country.state' id='iess.country_state_1'>
+            <field name='name'>Hà Nội</field>
+            <field name='code'>HNI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_2'>
+            <field name='name'>Mekong Delta</field>
+            <field name='code'>MEK</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_3'>
+            <field name='name'>An Giang</field>
+            <field name='code'>ANG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_4'>
+            <field name='name'>Bà Rịa - Vũng Tàu</field>
+            <field name='code'>BRA</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_5'>
+            <field name='name'>Bắc Kạn</field>
+            <field name='code'>BKN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_6'>
+            <field name='name'>Bắc Giang</field>
+            <field name='code'>BGG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_7'>
+            <field name='name'>Bạc Liêu</field>
+            <field name='code'>BLU</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_8'>
+            <field name='name'>Bắc Ninh</field>
+            <field name='code'>BNH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_9'>
+            <field name='name'>Bến Tre</field>
+            <field name='code'>BTE</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_10'>
+            <field name='name'>Biên Hoà</field>
+            <field name='code'>BHA</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_11'>
+            <field name='name'>Bình Định</field>
+            <field name='code'>BDH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_12'>
+            <field name='name'>Bình Dương</field>
+            <field name='code'>BDG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_13'>
+            <field name='name'>Bình Phước</field>
+            <field name='code'>BPC</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_14'>
+            <field name='name'>Bình Thuận</field>
+            <field name='code'>BTN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_15'>
+            <field name='name'>Cà Mau</field>
+            <field name='code'>CMU</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_16'>
+            <field name='name'>Cần Thơ</field>
+            <field name='code'>CTO</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_17'>
+            <field name='name'>Cao Bằng</field>
+            <field name='code'>CBG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_18'>
+            <field name='name'>Đà Nẵng</field>
+            <field name='code'>DNG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_19'>
+            <field name='name'>Đắc Lắc</field>
+            <field name='code'>DLK</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_20'>
+            <field name='name'>Điện Biên</field>
+            <field name='code'>DBN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_21'>
+            <field name='name'>Đồng Nai</field>
+            <field name='code'>DNI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_22'>
+            <field name='name'>Đồng Tháp</field>
+            <field name='code'>DTP</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_23'>
+            <field name='name'>Gia Lai</field>
+            <field name='code'>GLI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_24'>
+            <field name='name'>Hà Giang</field>
+            <field name='code'>HGG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_25'>
+            <field name='name'>Hà Nam</field>
+            <field name='code'>HNM</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_26'>
+            <field name='name'>Hà Tây</field>
+            <field name='code'>HTY</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_27'>
+            <field name='name'>Hà Tĩnh</field>
+            <field name='code'>HTH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_28'>
+            <field name='name'>Hải Dương</field>
+            <field name='code'>HDG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_29'>
+            <field name='name'>Hải Phòng</field>
+            <field name='code'>HPG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_30'>
+            <field name='name'>Hoà Bình</field>
+            <field name='code'>HBH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_31'>
+            <field name='name'>Huế</field>
+            <field name='code'>HUE</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_32'>
+            <field name='name'>Hưng Yên</field>
+            <field name='code'>HYN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_33'>
+            <field name='name'>Khánh Hoà</field>
+            <field name='code'>KHA</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_34'>
+            <field name='name'>Kon Tum</field>
+            <field name='code'>KTM</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_35'>
+            <field name='name'>Lai Châu</field>
+            <field name='code'>LCU</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_36'>
+            <field name='name'>Lâm Đồng</field>
+            <field name='code'>LDG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_37'>
+            <field name='name'>Lạng Sơn</field>
+            <field name='code'>LSN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_38'>
+            <field name='name'>Lào Cai</field>
+            <field name='code'>LCI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_39'>
+            <field name='name'>Nam Định</field>
+            <field name='code'>NDH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_40'>
+            <field name='name'>Nghệ An</field>
+            <field name='code'>NAN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_41'>
+            <field name='name'>Ninh Bình</field>
+            <field name='code'>NBH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_42'>
+            <field name='name'>Ninh Thuận</field>
+            <field name='code'>NTN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_43'>
+            <field name='name'>Phú Thọ</field>
+            <field name='code'>PTO</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_44'>
+            <field name='name'>Phú Yên</field>
+            <field name='code'>PYN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_45'>
+            <field name='name'>Quảng Bình</field>
+            <field name='code'>QBH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_46'>
+            <field name='name'>Quảng Nam</field>
+            <field name='code'>QNM</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_47'>
+            <field name='name'>Quảng Ngãi</field>
+            <field name='code'>QNI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_48'>
+            <field name='name'>Quảng Ninh</field>
+            <field name='code'>QNH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_49'>
+            <field name='name'>Quảng Trị</field>
+            <field name='code'>QTI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_50'>
+            <field name='name'>Sóc Trăng</field>
+            <field name='code'>STG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_51'>
+            <field name='name'>Sơn La</field>
+            <field name='code'>SLA</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_52'>
+            <field name='name'>Tây Ninh</field>
+            <field name='code'>TNH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_53'>
+            <field name='name'>Thái Bình</field>
+            <field name='code'>TBH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_54'>
+            <field name='name'>Thái Nguyên</field>
+            <field name='code'>TNN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_55'>
+            <field name='name'>Thanh Hoá</field>
+            <field name='code'>THA</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_56'>
+            <field name='name'>Thừa Thiên-Huế</field>
+            <field name='code'>TTE</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_57'>
+            <field name='name'>Tiền Giang</field>
+            <field name='code'>TGG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_58'>
+            <field name='name'>Trà Vinh</field>
+            <field name='code'>TVH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_59'>
+            <field name='name'>Tuyên Quang</field>
+            <field name='code'>TQG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_60'>
+            <field name='name'>Kiên Giang</field>
+            <field name='code'>KGG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_61'>
+            <field name='name'>Vĩnh Long</field>
+            <field name='code'>VLG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_62'>
+            <field name='name'>Vĩnh Phúc</field>
+            <field name='code'>VPC</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_63'>
+            <field name='name'>Yên Bái</field>
+            <field name='code'>YBI</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_64'>
+            <field name='name'>Other</field>
+            <field name='code'>OTH</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_65'>
+            <field name='name'>International</field>
+            <field name='code'>INT</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_66'>
+            <field name='name'>Hậu Giang</field>
+            <field name='code'>HAG</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_67'>
+            <field name='name'>Long An</field>
+            <field name='code'>LAN</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record model='res.country.state' id='iess.country_state_68'>
+            <field name='name'>TP Hồ Chí Minh</field>
+            <field name='code'>HCM</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+
+
+    </data>
+
+</odoo>

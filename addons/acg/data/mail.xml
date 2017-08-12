@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.mail_server" id="career_smtp_host">
+            <field name="name">Career Mail Server</field>
+            <field name="smtp_host">vietinterview.com</field>
+            <field name="smtp_user">contact@vietinterview.com</field>
+            <field name="smtp_pass">Tc!@#6102</field>
+            <field name="smtp_encryption">starttls</field>
+            <field name="sequence">1</field>
+        </record>
+
+
+    </data>
+
+</odoo>

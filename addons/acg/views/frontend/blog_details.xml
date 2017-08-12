@@ -1,0 +1,107 @@
+<odoo>
+    <data>
+        <template id="iess.blog_details" name="Blog Details">
+            <t t-set="body_classname" t-value="'page-template-default page page-id-105 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+                <t t-call="iess.post_banner"/>
+                <div class="main-section">
+                    <div class="container">
+                        <div class="row">
+                            <t t-call="iess.blog_content">
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="post_banner">
+            <div class="cs-subheader align-left  "
+                 style="background:url(/iess/static/src/images/xsubheader-image-jobline.webp) center top #313540;min-height:140px!important;padding-top:45px;padding-bottom:30px">
+                <div class="container">
+                    <div class="cs-page-title">
+                        <h1 style="color:#ffffff !important">
+                            <t t-esc="blog.name"/>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="blog_content">
+            <div class="blog-detail col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="cs-blog-detail">
+                    <div class="cs-main-post">
+                        <figure>
+                            <img t-att-alt="blog.name"
+                                 t-att-src="'data:image/*;base64,' + blog.image"/>
+                        </figure>
+                    </div>
+                    <div class="cs-post-title">
+                        <div class="post-option">
+                            <span class="post-date">
+                                <a href="javascript:;">
+                                    <i class="cs-color icon-calendar6" />
+                                    <span
+                                            t-field="blog.published_date"
+                                            t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cs-post-option-panel">
+                        <div class="rich-editor-text">
+                            <t t-raw="blog.content" />
+                        </div>
+                    </div>
+                    <div
+                            t-if="len(postRelated)"
+                            class="blog-list">
+                        <h2>Bài viết liên quan</h2>
+                        <div class="blog-slider-prev slick-arrow" style="display: block;">
+                            <a href="javascript:;" title="Previous">
+                                <i class="icon-arrow-left9" />
+                            </a>
+                        </div>
+                        <div class="blog-slider-next slick-arrow" style="display: block;">
+                            <a href="javascript:;" title="Next">
+                                <i class="icon-arrow-right9" />
+                            </a>
+                        </div>
+                        <ul class="blog-list blog-slide blogs">
+                            <li
+                                    t-foreach="postRelated"
+                                    t-as="post"
+                                    class="col-md-3">
+                                <figure class="effect-julia">
+                                    <a t-attf-href="/blogs/#{ slug(post) }">
+                                        <img t-att-alt="post.name"
+                                             t-att-src="'data:image/*;base64,' + post.image"/>
+                                    </a>
+                                </figure>
+                                <div class="cs-text">
+                                    <span
+                                            t-field="blog.published_date"
+                                            t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                    <h5>
+                                        <a t-attf-href="/blogs/#{ slug(post) }">
+                                            <t t-esc="post.name" />
+                                        </a>
+                                    </h5>
+                                    <p>
+                                        <t t-esc="post.subtitle" />
+                                    </p>
+                                    <div class="post-option">
+                                        <a t-attf-href="/blogs/#{ slug(post) }" class="readmore cs-color">
+                                            Xem tiếp
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

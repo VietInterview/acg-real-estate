@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <record id="hr_job_detail" model="ir.ui.view">
+            <field name="name">iess.job.detail</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_job_survey"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='employee_data']" position="before">
+                    <div>
+                        <label for="is_hot"/>
+                        <field name="is_hot"/>
+                    </div>
+                </xpath>
+                <xpath expr="//group[@name='employee_data']" position="inside">
+                    <group>
+                        <field name="deadline"/>
+                        <field name="position_id"/>
+                        <field name="qualification"/>
+                        <field name="gender"/>
+                        <field name="category_ids" widget="many2many_tags" placeholder="Categories..."/>
+                    </group>
+                    <group>
+                        <div>
+                            <label for="experience"/>
+                            <field name="experience" class="oe_inline"/>
+                            years
+                        </div>
+                    </group>
+                    <group>
+                        <field name="salary_min"/>
+                        <field name="salary_max"/>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@name='employee_data']" position="after">
+                    <div>
+                        <label for="requirements"/>
+                        <field name="requirements"/>
+                    </div>
+                    <div>
+                        <label for="interest"/>
+                        <field name="interest"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="res_company_detail" model="ir.ui.view">
+            <field name="name">iess.company.detail</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_registry']" position="before">
+                    <div>
+                        <label for="is_top"/>
+                        <field name="is_top"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="iess_applicant_simple_form" model="ir.ui.view">
+            <field name="name">iess.applicant.simple.form</field>
+            <field name="model">hr.applicant</field>
+            <field name="priority">200</field>
+            <field name="arch" type="xml">
+                <form string="Apply to Job Position">
+                    <sheet>
+                        <group>
+                            <field name="name"  />
+                            <field name="job_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_resume_form" model="ir.ui.view">
+            <field name="name">iess.resume.detail</field>
+            <field name="model">ir.attachment</field>
+            <field name="inherit_id" ref="base.view_attachment_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//h1" position="after">
+                    <button string="Apply to position" class="oe_stat_button btn-primary"
+                            attrs="{'invisible': [('res_model', '!=', 'hr.applicant')]}" name="action_apply_to_job"
+                            type="object"/>
+                </xpath>
+                <xpath expr="//group" position="after">
+                        <group groups="base.group_no_one" string="Preview" colspan="4">
+                            <field name="preview" widget="html"/>
+                        </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

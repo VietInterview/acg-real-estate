@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <template id="err_page" name="Page Error">
+            <t t-esc="values"/>
+        </template>
+    </data>
+</odoo>

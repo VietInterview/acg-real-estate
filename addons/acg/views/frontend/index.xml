@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <template name="Index" id="iess.index">
+            <t t-call="web.layout">
+                <t t-set="head">
+                    <link rel='stylesheet' href='/iess/static/src/css/dealine-style.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/jobhunt-indeed-jobs-style.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&#038;subset=latin&#038;ver=4.7.5' type='text/css' media='all' />
+                    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800&amp;subset=latin,vietnamese" />
+                    <link rel='stylesheet' href='/iess/static/src/css/iconmoon.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/bootstrap.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/style.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/top-menu.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/slicknav.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/widget.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/prettyPhoto.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/cs-woocommerce.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/custom-style.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/cs-jobhunt-plugin.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/jquery-te-1.4.0.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/jquery_datetimepicker.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/bootstrap-slider.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/chosen.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/custom_script.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/responsive.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/settings.css' type='text/css' media='all' />
+                    <link rel='stylesheet' href='/iess/static/src/css/jobhunt-notifications-frontend.css' type='text/css' media='all' />
+
+                    <script type='text/javascript' src='/iess/static/src/js/jquery.js'/>
+                </t>
+                <div id="cs_alerts" class="cs_alerts"/>
+                <div class="wrapper wrapper_full_width">
+                    <t t-call="iess.menu"/>
+                    <t t-raw="0"/>
+                    <t t-call="iess.footer"/>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
+

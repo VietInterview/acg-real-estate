@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+        <template id="iess.blog_list" name="Blog List">
+            <t t-set="body_classname" t-value="'page-template-default page page-id-105 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+                <t t-call="iess.blog_banner"/>
+                <div class="main-section">
+                    <div class="container">
+                        <div class="row">
+                            <t t-call="iess.bloglist">
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="blog_banner">
+            <div class="cs-subheader align-left  "
+                 style="background:url(/iess/static/src/images/xsubheader-image-jobline.webp) center top #313540;min-height:140px!important;padding-top:45px;padding-bottom:30px">
+                <div class="container">
+                    <div class="cs-page-title">
+                        <h1 style="color:#ffffff !important">Tư vấn</h1>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="bloglist">
+            <div class="page-content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <!-- Page Section -->
+                <div class="page-section cs-page-sec-541433 ">
+                    <!-- Container Start -->
+                    <div class=" ">
+                        <div class="row">
+                            <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div
+                                                t-foreach="blogs"
+                                                t-as="blog"
+                                                class="cs-blog blog-medium">
+                                            <div class="cs-media">
+                                                <figure>
+                                                    <a t-attf-href="/blogs/#{ slug(blog) }">
+                                                        <img t-att-alt="blog.name"
+                                                             t-att-src="'data:image/*;base64,' + blog.image"/>
+                                                    </a>
+                                                </figure>
+                                            </div>
+                                            <div class="blog-text">
+                                                <div class="post-option">
+                                                    <span class="post-date">
+                                                        <a t-attf-href="/blogs/#{ slug(blog) }">
+                                                            <i class="icon-calendar5"/>
+                                                            <span
+                                                                    t-field="blog.published_date"
+                                                                    t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="cs-post-title">
+                                                    <h3>
+                                                        <a t-attf-href="/blogs/#{ slug(blog) }">
+                                                            <t t-esc="blog.name" />
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <p>
+                                                    <t t-esc="blog.subtitle"/>...
+                                                </p>
+                                                <a t-attf-href="/blogs/#{ slug(blog) }" class="read-more">Xem tiếp</a>
+                                            </div>
+                                        </div>
+                                        <div class="cs-pagination-blog">
+                                            <nav>
+                                                <t t-call="website.pager"/>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

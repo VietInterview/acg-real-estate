@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="iess_blog_post_detail" model="ir.ui.view">
+            <field name="name">iess.blog.post</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group" position="after">
+                    <field name="content" placeholder="Blog Post Content"/>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

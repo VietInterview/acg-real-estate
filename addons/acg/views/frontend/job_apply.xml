@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+        <template id="iess.apply">
+            <t t-set="body_classname"
+               t-value="'obs-template-default single single-jobs postid-387 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+                <t t-set="additional_title">Apply Job</t>
+
+                <div id="wrap" class="container">
+                    <h1 class="text-center">
+                        Job Application Form
+                    </h1>
+                    <h2 t-if="job" class="text-center text-muted">
+                        <span t-field="job.name"/>
+                    </h2>
+
+                    <div class="row">
+                        <section id="job-apply">
+                            <form action="/website_form/hr.applicant" method="post"
+                                  class="s_website_form form-horizontal container-fluid mt32"
+                                  enctype="multipart/form-data"
+                                  data-success_page="/page/iess.thankyou">
+                                <input type="hidden" name="job_id" t-att-value="job.id" />
+                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <div class="col-md-3 col-sm-4 text-right">
+                                        <label class="control-label" for="partner_name">Your Name</label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="text" class="form-control o_website_form_input" name="partner_name"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <div class="col-md-3 col-sm-4 text-right">
+                                        <label class="control-label" for="email_from">Your Email</label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="email" class="form-control o_website_form_input" name="email_from"
+                                               required=""/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field o_website_form_required_custom">
+                                    <div class="col-md-3 col-sm-4 text-right">
+                                        <label class="control-label" for="partner_phone">Your Phone Number</label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="text" class="form-control o_website_form_input"
+                                               name="partner_phone" required=""/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field">
+                                    <div class="col-md-3 col-sm-4 text-right">
+                                        <label class="control-label" for="description">Short Introduction</label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8">
+                                        <textarea class="form-control o_website_form_input" name="description"/>
+                                    </div>
+                                </div>
+                                <div class="form-group form-field o_website_form_custom">
+                                    <div class="col-md-3 col-sm-4 text-right">
+                                        <label class="control-label" for="Resume">Resume</label>
+                                    </div>
+                                    <div class="col-md-7 col-sm-8">
+                                        <input type="file" class="form-control o_website_form_input" name="Resume[]"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                                        <button type="submit" class="btn btn-primary btn-lg o_website_form_send">
+                                            Submit
+                                        </button>
+                                        <span id="o_website_form_result"/>
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="iess.thankyou">
+            <t t-set="body_classname"
+               t-value="'obs-template-default single single-jobs postid-387 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+
+                <div class="container">
+                    <h1>Thank you!</h1>
+                    <p>
+                        Your job application has been successfully registered,
+                        we will get back to you soon.
+                    </p>
+                </div>
+                <section class="oe_dark">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center mt16 mb16">
+                                <a href="/" class="btn btn-primary btn-lg">Continue To Our Website</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </t>
+        </template>
+    </data>
+</odoo>

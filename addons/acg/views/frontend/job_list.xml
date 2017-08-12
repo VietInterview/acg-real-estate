@@ -1,0 +1,404 @@
+<odoo>
+    <data>
+        <template id="iess.job_list" name="Job List">
+            <t t-set="body_classname" t-value="'page-template-default page page-id-105 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+                <t t-call="iess.job_banner">
+                </t>
+                <div class="main-section">
+                    <t t-call="iess.job_search_result">
+                    </t>
+                </div>
+            </t>
+
+        </template>
+
+        <template id="iess.job_banner">
+            <div class="cs-subheader align-left  "
+                 style="background: url(/iess/static/src/images/subheader-image-jobline.jpg) center top  #313540; min-height:140px!important; padding-top:45px; padding-bottom:30px;  ">
+                <div class="container">
+                    <div class="cs-page-title">
+                        <h1 style="color:#ffffff !important">Danh sách việc làm</h1>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="iess.job_search_result">
+            <div class="page-section cs-page-sec-404376 ">
+                <!-- Container Start -->
+                <div class="container ">
+                    <div class="row">
+                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="cs_alerts"/>
+                                    <div class="main-cs-loader"/>
+                                    <!-- start specialism popup -->
+                                    <div class="modal fade" id="light" tabindex="-1" role="dialog"
+                                         aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <div class="white_content">
+                                                        <a class="close" data-dismiss="modal"/>
+                                                        <form action="#" method="get" id="frm_all_specialisms66620582">
+                                                            <ul class="custom-listing">
+                                                                <li
+                                                                        t-foreach="jobCats"
+                                                                        t-as="jobCat"
+                                                                        class="radio">
+                                                                    <input type="radio"
+                                                                           onchange="javascript:frm_all_specialisms66620582.submit();"
+                                                                           t-att-id="'checklistcomplete' + str(jobCat.id)"
+                                                                           name="cat_id"
+                                                                           t-att-value="jobCat.id"/>
+                                                                    <label t-att-for="'checklistcomplete' + str(jobCat.id)">
+                                                                        <t t-esc="jobCat.title"/>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="fade907683" class="black_overlay"/>
+                                    <!-- end popup -->
+                                    <div class="cs-jobs-container">
+                                        <div class="row">
+                                            <div class="cs-content-holder">
+                                                <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                                    <div class="cs-listing-filters">
+                                                        <div class="cs-job-inputs">
+                                                            <form class="side-loc-srch-form" method="get">
+                                                                <!-- end extra query string -->
+                                                                <div class="search-input">
+                                                                    <i class="icon-search7"/>
+                                                                    <input type="search"
+                                                                           placeholder="Nhập việc làm cần tìm..."
+                                                                           class="form-control txt-field side-location-field"
+                                                                           id="cs_job_title" name="job_title"/>
+                                                                </div>
+                                                                <!-- location with radius -->
+                                                                <div class="job-side-location-field">
+                                                                    <div class="select-dropdown">
+                                                                        <select data-placeholder="Mọi địa điểm"
+                                                                                class="chosen-select"
+                                                                                id="province_id" name="province_id">
+                                                                            <option value="">Mọi địa điểm</option>
+                                                                            <option
+                                                                                    t-foreach="provinces"
+                                                                                    t-as="province"
+                                                                                    t-att-value="province.id">
+                                                                                <t t-esc="province.name"/>
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="cs-job-posted">
+                                                            <div class="searchbox-heading">
+                                                                <h5>Ngày đăng</h5>
+                                                            </div>
+                                                            <ul>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=lasthour"
+                                                                       onclick="cs_listing_content_load();">1 giờ qua
+                                                                    </a>
+                                                                </li>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=last24"
+                                                                       onclick="cs_listing_content_load();">24 giờ qua
+                                                                    </a>
+                                                                </li>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=7days"
+                                                                       onclick="cs_listing_content_load();">7 ngày qua
+                                                                    </a>
+                                                                </li>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=14days"
+                                                                       onclick="cs_listing_content_load();">14 ngày qua
+                                                                    </a>
+                                                                </li>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=30days"
+                                                                       onclick="cs_listing_content_load();">30 ngày qua
+                                                                    </a>
+                                                                </li>
+                                                                <li class="cs-radio-btn">
+                                                                    <a href="?posted=all" class="active"
+                                                                       onclick="cs_listing_content_load();">Tất cả
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="cs-job-vacancy">
+                                                            <div class="searchbox-heading">
+                                                                <h5>Loại tuyển dụng</h5>
+                                                            </div>
+                                                            <form method="GET" id="frm_job_type_list">
+                                                                <ul class="cs_vacancy_type">
+                                                                    <li
+                                                                            t-foreach="positions"
+                                                                            t-as="position"
+                                                                    >
+                                                                        <span t-att-class="'cs_vacancy_type_list position-' + str(position.id)"/>
+                                                                        <a t-att-href="'?position=' + str(position.id)"
+                                                                           onclick="cs_listing_content_load();">
+                                                                            <t t-esc="position.title"/>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </form>
+                                                        </div>
+                                                        <div class="cs-job-specialisms">
+                                                            <div class="searchbox-heading">
+                                                                <h5>Chuyên ngành</h5>
+                                                            </div>
+                                                            <form method="GET" id="frm_specialisms_list">
+                                                                <ul class="specialism_list">
+                                                                    <li
+                                                                            t-foreach="jobCatsShort"
+                                                                            t-as="jobCat"
+                                                                            class="radio">
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <input type="radio" class="radio"
+                                                                                   onclick="cs_listing_content_load();"
+                                                                                   onchange="javascript:frm_specialisms_list.submit();"
+                                                                                   id="checklist1" name="cat_id"
+                                                                                   t-att-value="jobCat.id"/>
+                                                                            <label for="checklist1">
+                                                                                <t t-esc="jobCat.title"/>
+                                                                            </label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="checkbox checkbox-primary">
+                                                                            <a data-target="#light" data-toggle="modal"
+                                                                               href="#">Xem thêm
+                                                                            </a>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </form>
+                                                        </div>
+                                                        <a class="cs-expand-filters">
+                                                            <i class="icon-minus8"/>
+                                                            Thu gọn bộ lọc
+                                                        </a>
+                                                        <div class="accordion" id="accordion2">
+                                                            <div class="accordion-group">
+                                                                <div class="accordion-heading">
+                                                                    <a class="accordion-toggle" data-toggle="collapse"
+                                                                       data-parent="#accordion2" href="#collapse11">
+                                                                        Mức lương
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapse11" class="accordion-body">
+                                                                    <div class="accordion-inner">
+                                                                        <form action="#" method="get"
+                                                                              name="frm_salarypackage"
+                                                                              id="frm_salarypackage">
+                                                                            <ul class="custom-listing">
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?salarypackage=0--15000">0-
+                                                                                        £15,000
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?salarypackage=15000-20000">
+                                                                                        £15,000 - £20,000
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?salarypackage=20000-30000">
+                                                                                        £20,000 - £30,000
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?salarypackage=30000-50000">
+                                                                                        £30,000 - £50,000
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?salarypackage=50000-plus">
+                                                                                        £50,000+
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="accordion-group">
+                                                                <div class="accordion-heading">
+                                                                    <a class="accordion-toggle collapsed"
+                                                                       data-toggle="collapse" data-parent="#accordion2"
+                                                                       href="#collapse13">
+                                                                        Kinh nghiệm
+                                                                    </a>
+                                                                </div>
+                                                                <div id="collapse13" class="accordion-body collapse ">
+                                                                    <div class="accordion-inner">
+                                                                        <form action="#" method="get"
+                                                                              name="frm_experiencetotal"
+                                                                              id="frm_experiencetotal">
+                                                                            <ul class="custom-listing">
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=fresh">
+                                                                                        Chưa có
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=less-than-1-year">
+                                                                                        Dưới 1 năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=2-years">2
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=3-years">3
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=4-years">4
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=5-years">5
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=6-years">6
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=7-years">7
+                                                                                        năm
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a onclick="cs_listing_content_load();"
+                                                                                       class="text-capitalize"
+                                                                                       href="?experiencetotal=8-years">8
+                                                                                        năm +
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <div class="hiring-holder col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                    <div class="email-me-top">
+                                                        <button class="email-jobs-top signed-out">Thông báo cho tôi
+                                                            những việc như thế này
+                                                        </button>
+                                                    </div>
+                                                    <ul class="jobs-listing modern">
+                                                        <t t-foreach="listJob or []" t-as="job">
+                                                            <li>
+                                                                <div class="jobs-content">
+                                                                    <div class="cs-media">
+                                                                        <figure>
+                                                                            <a href="#">
+                                                                                <img
+                                                                                        t-att-alt="job.company_id.name"
+                                                                                        t-att-src="'data:image/*;base64,' + job.company_id.logo"/>
+                                                                            </a>
+                                                                        </figure>
+                                                                    </div>
+                                                                    <div class="cs-text">
+                                                                        <div class="cs-post-title">
+                                                                            <a t-attf-href="/jobs/detail/#{ slug(job) }">
+                                                                                <span t-field="job.display_name"/>
+                                                                            </a>
+                                                                        </div>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <span>Hạn nộp hồ sơ:</span>
+                                                                                <t t-esc="job.deadline"/>
+                                                                            </li>
+                                                                            <li>
+                                                                                <span>Địa điểm:</span>
+                                                                                <t t-esc="job.address_id.contact_address"/>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="list-options">
+                                                                            <a href="#"
+                                                                               class="jobtype-btn jobtype-part-time">Bán
+                                                                                thời gian
+                                                                            </a>
+                                                                            <div class="wish-list">
+                                                                                <button type="button"
+                                                                                        class="heart-btn shortlist"
+                                                                                        data-toggle="tooltip"
+                                                                                        data-placement="top"
+                                                                                        title="Thêm vào danh sách yêu thích">
+                                                                                    <i class='icon-heart-o'/>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </t>
+                                                    </ul>
+                                                    <nav>
+                                                        <div class="products_pager">
+                                                            <t t-call="website.pager"/>
+                                                        </div>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>

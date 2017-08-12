@@ -1,0 +1,87 @@
+<odoo>
+    <data>
+        <template id="aboutus_page" page="True">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure">
+                        <div class="wrapper wrapper_full_width">
+                            <div class="main-section">
+                                <section id="about">
+                                    <div class="sections" style="padding-bottom: 50px">
+                                        <img src="iess/static/src/images/bg_about_vi.jpg" alt="" width="100%"/>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h4 style="color: #1C1C1C">Vietinterview -
+                                                    <i>Way To Success</i>
+                                                </h4>
+                                                <p style="text-align: justify">Vietinterview là thương hiệu của công ty
+                                                    cổ phần công nghệ Thành Công Á Châu, công ty tiên phong tại thị
+                                                    trường Việt Nam cung cấp các giải pháp phần mềm cho doanh nghiệp dựa
+                                                    trên nền tảng Video. Các sản phẩm thành công của công ty bao gồm: hệ
+                                                    thống phỏng vấn video và trực tuyến, hệ thống đào tạo E-learning
+                                                    tích hợp video và hệ thống phòng họp trực tuyến cho doanh nghiệp.
+                                                    Các sản phẩm này đã được đón nhận và sử dụng bời nhiều doanh nghiệp
+                                                    lớn góp phần giúp Vietinterview khẳng định tên tuổi và trở thành nhà
+                                                    cung cấp các giải pháp phần mềm Video hàng đầu tại Việt Nam.
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-6" style="margin-top: 25px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h3>Sứ Mệnh:</h3>
+                                                <img src="iess/static/src/images/img_ab1.JPG"/>
+                                                <p style="margin-top: 20px">Tối ưu hoá hoạt động của các doanh nghiệp
+                                                    bằng việc cung cấp các giải pháp phần mềm tốt nhất dựa trên nền tảng
+                                                    Web.
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h3>Tầm Nhìn:</h3>
+                                                <img src="iess/static/src/images/img_ab2.JPG"/>
+                                                <p style="margin-top: 20px">Trở thành công ty đứng đầu thị trường Việt
+                                                    nam trong việc cung cấp các giải pháp phần mềm video cho doanh
+                                                    nghiệp.
+                                                    <br>Tạo ra xu hướng “công nghệ hoá” các quy trình tuyển dụng, đào
+                                                        tạo và giao tiếp nhằm hỗ trợ sự phát triển của các doanh nghiệp
+                                                        hoạt
+                                                        động tại thị trường Việt Nam.
+                                                    </br>
+                                                    <br>Trở thành doanh nghiệp tiên phong góp phần vào quy trình áp dụng
+                                                        công nghệ vào “hiện đại hoá” đất nước.
+                                                    </br>
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h3>Văn Hóa Công Ty:</h3>
+                                                <img src="iess/static/src/images/img_ab3.JPG"/>
+                                                <p style="margin-top: 20px">Không ngừng sáng tạo.
+                                                    <br>Hợp tác toàn diện.</br>
+                                                    <br>Nâng cao tinh thần trách nhiệm.</br>
+                                                    <br>Thẳng thắn.</br>
+                                                    <br>Chính trực.</br>
+                                                    <br/>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </t>
+
+        </template>
+    </data>
+</odoo>

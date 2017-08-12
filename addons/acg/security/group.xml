@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="base.public_user" model="res.users">
+            <field name="active">True</field>
+        </record>
+        <record id="group_public_user" model="res.groups">
+            <field name="name">i-ESS Public User</field>
+            <field name="users" eval="[(4, ref('base.public_user'))]"/>
+        </record>
+        <record id="group_candidate_user" model="res.groups">
+            <field name="name">i-ESS Public User</field>
+        </record>
+    </data>
+</odoo>

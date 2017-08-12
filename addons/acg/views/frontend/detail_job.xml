@@ -1,0 +1,474 @@
+<odoo>
+    <data>
+        <template id="iess.detail_job" name="Job Detail">
+            <t t-set="body_classname"
+               t-value="'obs-template-default single single-jobs postid-387 wp-jobhunt cbp-spmenu-push'"/>
+            <t t-call="iess.index">
+                <t t-call="iess.left_page">
+                </t>
+                <t t-call="iess.content_job">
+                </t>
+            </t>
+        </template>
+        <template id="iess.left_page">
+            <div class="cs-subheader align-left"
+                 style="background: url(/iess/static/src/images/subheader-image-jobline.jpg) center top  #313540; min-height:140px!important; padding-top:45px; padding-bottom:30px;  ">
+                <div class="container">
+                    <div class="cs-page-title">
+                        <h1 style="color:#ffffff !important">
+                            <t t-esc="job.name"/>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template id="iess.content_job">
+            <div class="main-section">
+                <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+                        <article
+                                class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+                            <!-- alert for complete theme -->
+                            <div class="cs_alerts"/>
+                            <div class="main-section jobs-detail-3">
+                                <div class="page-section">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="section-fullwidtht col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="jobs-info">
+                                                            <div class="cs-media">
+                                                                <figure>
+                                                                    <a href="#">
+                                                                        <img t-att-alt="job.company_id.display_name"
+                                                                             t-att-src="'data:image/*;base64,' + job.company_id.logo"/>
+                                                                    </a>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="cs-text">
+                                                                <strong>
+                                                                    <t t-esc="job.company_id.display_name"/>
+                                                                </strong>
+                                                                <ul class="post-options">
+                                                                    <li>
+                                                                        <i class="icon-location6"/>
+                                                                        <a href="#">
+                                                                            <t t-esc="job.company_id.country_id.display_name"/>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="icon-calendar5"/>
+                                                                        Ngày đăng:
+                                                                        <span
+                                                                                t-field="job.create_date"
+                                                                                t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="icon-text"/>
+                                                                        Đã ứng tuyển
+                                                                        <span>
+                                                                            <!--<t t-esc="job.application_count"/>-->
+                                                                        </span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="icon-eye7"/>
+                                                                        Lượt xem
+                                                                        <span>
+                                                                            <!--<t t-esc="job.documents_count"/>-->
+                                                                        </span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="social-media">
+                                                                <span>Chia sẻ</span>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a class="addthis_button_facebook"
+                                                                           data-original-title="Facebook">
+                                                                            <i class="icon-facebook2"/>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="addthis_button_twitter"
+                                                                           data-original-title="twitter">
+                                                                            <i class="icon-twitter2"/>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="addthis_button_dribbble"
+                                                                           data-original-title="Dribbble">
+                                                                            <i class="icon-dribbble7"/>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="addthis_button_instagram"
+                                                                           data-original-title="Instagram">
+                                                                            <i class="icon-instagram4"/>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-section">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="section-content col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-xs-12">
+                                                        <div class="rich-editor-text">
+                                                            <h3>Mô tả</h3>
+                                                            <div>
+                                                                <t t-raw="job.description"/>
+                                                            </div>
+                                                            <h3>Yêu cầu</h3>
+                                                            <div>
+                                                                <t t-raw="job.requirements"/>
+                                                            </div>
+                                                            <h3>Quyền lợi</h3>
+                                                            <div>
+                                                                <t t-raw="job.interest"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                        <div class="jobs-detail-listing">
+                                                            <h6>Chi tiết công việc</h6>
+                                                            <ul class="row">
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-banknote"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Mức lương</span>
+                                                                            <strong t-if="job.salary_min and job.salary_max">
+                                                                                <t t-esc="job.salary_min"/>-
+                                                                                <t t-esc="job.salary_max"/>
+                                                                                triệu
+                                                                            </strong>
+                                                                            <strong t-if="job.salary_min == 0 and job.salary_max == 0">
+                                                                                Cạnh tranh
+                                                                            </strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-paperplane2"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Cấp bậc</span>
+                                                                            <strong>
+                                                                                <t t-esc="job.position_id.title"/>
+                                                                            </strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-study"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Kinh nghiệm</span>
+                                                                            <strong><t t-esc="job.experience" /> năm</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-profile-male"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Giới tính</span>
+                                                                            <strong><t t-esc="job.gender or 'Không yêu cầu'" /> </strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-linegraph"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Ngành học</span>
+                                                                            <strong>CNTT</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                    <div class="listing-inner">
+                                                                        <i class="icon-graduation"/>
+                                                                        <div class="cs-text">
+                                                                            <span>Chuyên môn</span>
+                                                                            <strong>Bằng thạc sĩ</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="col-lg-12 col-md-12 col-sm-12">
+                                                                    <div class="listing-inner"/>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="apply-buttons">
+                                                            <div t-if="not (applicant and applicant.id)">
+                                                                <a
+                                                                        t-if="user_id.partner_id.name == 'Public user'"
+                                                                        data-target="#sign-in"
+                                                                        data-toggle="modal"
+                                                                        href="javascript:;"
+                                                                        class="btn large like applied_icon">
+                                                                    <i class="icon-briefcase4"/>
+                                                                    Ứng tuyển ngay
+                                                                </a>
+                                                                <a
+                                                                        t-if="not user_id.partner_id.name == 'Public user'"
+                                                                        data-target="#job-apply"
+                                                                        data-toggle="modal"
+                                                                        href="javascript:;"
+                                                                        class="btn large like applied_icon">
+                                                                    <i class="icon-briefcase4"/>
+                                                                    Ứng tuyển ngay
+                                                                </a>
+                                                            </div>
+                                                            <div t-if="applicant and applicant.id">
+                                                                <a href="javascript:;" class="active btn large like applied_icon">
+                                                                    <i class="active icon-briefcase4" />Đã ứng tuyển
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal fade" id="job-apply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <a class="close" data-dismiss="modal">&amp;times;</a>
+                                                                            <h4 class="modal-title">Ứng tuyển</h4>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="alert alert-success hide">
+                                                                                <strong>Thành công!</strong> Đơn ứng tuyển của bạn đã được gửi đi!
+                                                                            </div>
+                                                                            <div class="alert alert-danger hide">
+                                                                                <strong>Lỗi!</strong> Không thể thực hiện yêu cầu này!
+                                                                            </div>
+                                                                            <form t-att-action="'/jobs/apply/' + str(job.id)" method="post"
+                                                                                  class="form-horizontal"
+                                                                                  enctype="multipart/form-data">
+                                                                                <input type="hidden" name="job_id" t-att-value="job.id" />
+                                                                                <input type="hidden" name="user_id" t-att-value="user_id.id" />
+                                                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                                                <div class="form-group form-field o_website_form_required_custom">
+                                                                                    <div class="col-md-3 col-sm-4 text-right">
+                                                                                        <label class="control-label" for="partner_name">Họ tên</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-7 col-sm-8">
+                                                                                        <input type="text" class="form-control o_website_form_input" name="partner_name"
+                                                                                               placeholder="Nhập họ tên"
+                                                                                               required=""/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group form-field o_website_form_required_custom">
+                                                                                    <div class="col-md-3 col-sm-4 text-right">
+                                                                                        <label class="control-label" for="email_from">Email</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-7 col-sm-8">
+                                                                                        <input type="email" class="form-control o_website_form_input" name="email_from"
+                                                                                               placeholder="Nhập địa chỉ email"
+                                                                                               required=""/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group form-field o_website_form_required_custom">
+                                                                                    <div class="col-md-3 col-sm-4 text-right">
+                                                                                        <label class="control-label" for="partner_phone">Số điện thoại</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-7 col-sm-8">
+                                                                                        <input type="text" class="form-control o_website_form_input"
+                                                                                               placeholder="Nhập số điện thoại"
+                                                                                               name="partner_phone" required=""/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group form-field">
+                                                                                    <div class="col-md-3 col-sm-4 text-right">
+                                                                                        <label class="control-label" for="description">Mô tả ngắn</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-7 col-sm-8">
+                                                                                        <textarea rows="5" class="form-control o_website_form_input" name="description"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group form-field o_website_form_custom">
+                                                                                    <div class="col-md-3 col-sm-4 text-right">
+                                                                                        <label class="control-label" for="Resume">Hồ sơ</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-7 col-sm-8">
+                                                                                        <input type="file" class="form-control o_website_form_input" name="Resume[0]"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                                                                                        <button type="submit" class="btn btn-primary btn-lg o_website_form_send">
+                                                                                            Ứng tuyển
+                                                                                        </button>
+                                                                                        <span id="o_website_form_result"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cs-content-holder">
+                                                    <section class="cs-featured-jobs list">
+                                                        <div class="featured-holder">
+                                                            <h4>Việc làm liên quan (10)</h4>
+                                                            <ul class="cs-company-jobs">
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">19-06-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dc932b">Thực tập
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng - Telesale
+                                                                                Tại Văn Phòng
+                                                                            </a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">23-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dd0d0d">Tạm thời
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Nữ Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">13-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#4288c9">Bán thời gian
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">19-06-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dc932b">Thực tập
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng - Telesale
+                                                                                Tại Văn Phòng
+                                                                            </a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">23-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dd0d0d">Tạm thời
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Nữ Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">13-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#4288c9">Bán thời gian
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">19-06-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dc932b">Thực tập
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Chăm Sóc Khách Hàng - Telesale
+                                                                                Tại Văn Phòng
+                                                                            </a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">23-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#dd0d0d">Tạm thời
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Nữ Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">13-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#4288c9">Bán thời gian
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="cs-text">
+                                                                        <span>
+                                                                            <a href="#">Nữ Chăm Sóc Khách Hàng</a>
+                                                                        </span>
+                                                                        lúc
+                                                                        <span class="post-date">13-05-2017</span>
+                                                                        <a href="#" class="categories"
+                                                                           style="color:#4288c9">Bán thời gian
+                                                                        </a>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div class="section-sidebar col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                <div class="employer-contact-form">
+                                                    <h5>Liên hệ</h5>
+                                                    <div class="cs-profile-contact-detail">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </main>
+                </div>
+            </div>
+        </template>
+    </data>
+</odoo>
