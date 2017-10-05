@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ACG Real Estate",
+    'name': "ACG Real Estate web",
 
     'summary': """
         ACG - Real Estate Management""",

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import jobs
+from . import products
 from . import blogs
-from . import applicant

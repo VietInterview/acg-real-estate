@@ -25,8 +25,8 @@
 
     # always loaded
     'data': [
-        'security/group.xml',
-        'security/ir.model.access.csv',
+        #'security/ir.model.access.csv',
+        'views/backend/product.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
